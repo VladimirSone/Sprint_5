@@ -8,7 +8,6 @@ def create_random_email():
     random_email = f'vladimirshutovtroitskiy{random_letters}_{random.randint(100, 999)}@yandex.ru'
     return random_email
 
-
 # Генерация пароля с рандомными буквами и рандомным числом для регистрации
 def create_random_password():
     random_letters = ''.join((random.choice(string.ascii_letters) for x in range(2)))

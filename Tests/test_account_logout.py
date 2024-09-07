@@ -5,6 +5,9 @@ from locator import TestLocators
 
 class TestAccountLogout:
     def test_account_logout(self, driver, login):
-        WebDriverWait(driver, 6).until(expected_conditions.presence_of_element_located(TestLocators.place_an_order))  # оформить заказ
-        assert driver.find_element(*TestLocators.place_an_order).is_displayed()  # проверка появления кнопки оформить заказ
-        driver.quit()
+        WebDriverWait(driver,6).until(expected_conditions.visibility_of_element_located(TestLocators.place_an_order))
+        driver.find_element(*TestLocators.personal_account).click()
+        WebDriverWait(driver,6).until(expected_conditions.visibility_of_element_located(TestLocators.account_profile))
+        driver.find_element(*TestLocators.exit).click()
+        WebDriverWait(driver, 6).until(expected_conditions.presence_of_element_located(TestLocators.enter))  # оформить заказ
+        assert driver.find_element(*TestLocators.enter).is_displayed()  # кнопка Войти на странице Вход

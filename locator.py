@@ -2,64 +2,76 @@ from selenium.webdriver.common.by import By
 
 class TestLocators:
     # кнопка зарегистрироваться финальная
-    button_register = By.XPATH, '/html/body/div/div/main/div/form/button'
+    button_register = By.XPATH, '//button[text() = "Зарегистрироваться"]'
 
     # поле login
-    login_field = By.XPATH, '/html/body/div/div/main/div/form/fieldset[2]/div/div/input'
+    login_field = By.XPATH, '//label[text() = "Email"]/following-sibling::input'
 
     # кнопка регистрации нового пользователя
-    new_registration = By.XPATH, '/html/body/div/div/main/div/div/p[1]/a'
+    new_registration = By.XPATH, '//a[text() = "Зарегистрироваться"]'
 
     # поле ввода имени
-    name_field = By.TAG_NAME, 'input'
+    name_field = By.XPATH, '//label[text() = "Имя"]/following-sibling::input'
 
     # кнопка войти в аккаунт на главной странице
-    button_enter = By.XPATH, '/html/body/div/div/main/section[2]/div/button'
+    button_enter = By.XPATH, '//button[text() = "Войти в аккаунт"]'
 
     # кнопка Войти на странице Вход
-    enter = By.XPATH, '/html/body/div/div/main/div/form/button'        # '//*[@id="root"]/div/main/div/form/button'
+    enter = By.XPATH, '//button[text() = "Войти"]'
 
     # поле email на странице Входа в личный кабинет
-    email = By.XPATH, '/html/body/div/div/main/div/form/fieldset[1]/div/div/input'
+    email = By.XPATH, '//label[text()="Email"]/following-sibling::input'
 
     # кнопка "Войти" через форму регистрации
-    enter_registration = By.XPATH, '/html/body/div/div/main/div/div/p/a'
+    enter_registration = By.XPATH, '//a[text() = "Войти"]'
 
     # кнопка "восстановить"
-    recover = By.XPATH, '/html/body/div/div/main/div/div/p[2]/a'    # '/html/body/div/div/main/div/form/button'
+    recover = By.XPATH, '//a[text() = "Восстановить пароль"]'
+
+    # кнопка войти в форме восстановить
+    button_enter_recover = By.XPATH, '//a[text()="Войти"]'
 
     # поле email в форме восстановить
-    email_recover = By.XPATH, '/html/body/div/div/main/div/form/fieldset/div/div/input'
+    email_recover = By.XPATH, '//label[text()="Email"]/following-sibling::input'
 
     # кнопка "Личный кабинет"
-    personal_account = By.XPATH, '/html/body/div/div/header/nav/a/p'
+    personal_account = By.XPATH, '//p[text()="Личный Кабинет"]'
 
     # кнопка "Конструктор"
-    construction = By.XPATH, '/html/body/div/div/header/nav/ul/li[1]/a/p'
+    construction = By.XPATH, '//p[text()="Конструктор"]'
 
     # иконка "Stellar Burgers"
-    icon = By.XPATH, '/html/body/div/div/header/nav/div'
+    icon = By.XPATH, '//div[@class="AppHeader_header__logo__2D0X2"]'
 
     # кнопка "Выход" в личном кабинете
-    exit = By.XPATH, '/html/body/div/div/main/div/nav/ul/li[3]/button'
+    exit = By.XPATH, '//button[text()="Выход"]'
 
     # Кнопка "Оформить заказ"
     place_an_order = By.XPATH, '//button[text()="Оформить заказ"]'
 
     # текст "Некорректный пароль"
-    invalid_password = By.XPATH, '/html/body/div/div/main/div/form/fieldset[3]/div/p'
+    invalid_password = By.XPATH, '//p[text()="Некорректный пароль"]'
 
     # поле пароль
-    password = By.XPATH, '/html/body/div/div/main/div/form/fieldset[2]/div/div/input'
+    password = By.XPATH, '//label[text() = "Пароль"]/following-sibling::input'
 
     # Соусы
-    sauce = By.XPATH, '/html/body/div/div/main/section[1]/div[1]/div[2]/span'
+    sauce = By.XPATH, '//span[text()="Соусы"]'
 
     # Булки
-    rolls = By.XPATH, '/html/body/div/div/main/section[1]/div[1]/div[1]/span'
+    rolls = By.XPATH, '//span[text()="Булки"]'
 
     # Начинки
-    fillings = By.XPATH, '/html/body/div/div/main/section[1]/div[1]/div[3]/span'
+    fillings = By.XPATH, '//span[text()="Начинки"]'
 
     # кнопка Профиль
-    account_profile = By.XPATH, '/html/body/div/div/main/div/nav/ul/li[1]/a'
+    account_profile = By.XPATH, '//a[text()="Профиль"]'
+
+    # Соус фирменный Space Sauce
+    Space_Sauce = By.XPATH, '//p[text()="Соус фирменный Space Sauce"]'
+
+    # Говяжий метеорит (отбивная)
+    the_chop = By.XPATH, '//p[text()="Говяжий метеорит (отбивная)"]'
+
+    # Флюоресцентная булка
+    fluorescent_rolls = By.XPATH, '//p[text()="Флюоресцентная булка R2-D3"]'
