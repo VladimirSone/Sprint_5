@@ -10,7 +10,6 @@ class TestEntranceAccount:
         assert driver.find_element(*TestLocators.place_an_order).is_displayed()
 
 # вход через кнопку «Личный кабинет»
-class TestPersonalAccount:
     def test_personal_account(self, driver):
         driver.find_element(*TestLocators.personal_account).click()
         WebDriverWait(driver, 6).until(expected_conditions.visibility_of_element_located(TestLocators.new_registration))
@@ -21,7 +20,6 @@ class TestPersonalAccount:
         assert driver.find_element(*TestLocators.place_an_order).is_displayed()
 
 # вход через кнопку в форме регистрации
-class TestFormRegistration:
     def test_form_registration(self, driver):
         driver.find_element(*TestLocators.button_enter).click()  # нажать кнопку войти в аккаунт
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(TestLocators.new_registration))
@@ -35,7 +33,6 @@ class TestFormRegistration:
 
 
 # вход через кнопку в форме восстановления пароля
-class TestPasswordRecovery:
     def test_password_recovery(self, driver):
         driver.find_element(*TestLocators.button_enter).click()
         driver.find_element(*TestLocators.recover).click()  # кнопка восстановить
