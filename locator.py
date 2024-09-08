@@ -67,11 +67,5 @@ class TestLocators:
     # кнопка Профиль
     account_profile = By.XPATH, '//a[text()="Профиль"]'
 
-    # Соус фирменный Space Sauce
-    Space_Sauce = By.XPATH, '//p[text()="Соус фирменный Space Sauce"]'
-
-    # Говяжий метеорит (отбивная)
-    the_chop = By.XPATH, '//p[text()="Говяжий метеорит (отбивная)"]'
-
-    # Флюоресцентная булка
-    fluorescent_rolls = By.XPATH, '//p[text()="Флюоресцентная булка R2-D3"]'
+    # нажатие кнопки
+    button_pressed = By.XPATH, '//div[@class = "tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect"]'
